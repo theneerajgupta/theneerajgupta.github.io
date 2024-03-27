@@ -425,9 +425,13 @@ main {
 .contact-info :is(.contact-link, time, address) {
   color: var(--white-2);
   font-size: var(--fs-7);
+  text-wrap: pretty;
 }
 
-.contact-info address { font-style: normal; }
+.contact-info address { 
+  font-style: normal; 
+  text-wrap:pretty;
+}
 
 .social-list {
   display: flex;
@@ -441,8 +445,17 @@ main {
 .social-item .social-link {
   color: var(--light-gray-70);
   font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
 }
 
+.social-item .social-link > p {
+  font-size: var(--fs-7);
+  margin-top: 1px;
+}
 
 .social-item .social-link:hover { color: var(--light-gray); }
 
