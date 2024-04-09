@@ -523,18 +523,21 @@ main {
 /*
 * #Application and Languages
 */
-.applangs-content {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+.myskills-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding-top: 16px;
   padding-bottom: 40px;
+  overflow: hidden;
+  color: var(--orange-yellow-crayola);
+  gap: 16px 2px;
 }
 
-.applangs-content .applangs-item {
-  border: 1px solid white;
-  width: inherit;
-  height: 140px;
+.myskills-card {
+  padding: 16px 32px !important;
+  transition: ease-in-out ;
 }
 
 
