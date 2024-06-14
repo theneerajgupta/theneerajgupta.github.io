@@ -157,8 +157,11 @@ html { font-family: var(--ff-poppins); }
 
 body { background: var(--smoky-black); }
 
-
-
+p {
+  color: white;
+  font-weight: 300;
+  font-size:var(--fs-6);
+}
 
 
 /*-----------------------------------*\

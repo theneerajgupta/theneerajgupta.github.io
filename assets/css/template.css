@@ -1,0 +1,234 @@
+/* GLOBAL VARIABLES */
+:root {
+
+    /* colors ================================================== */
+    /* gradient */
+    --bg-gradient-onyx: linear-gradient(
+      to bottom right, 
+      hsl(240, 1%, 25%) 3%, 
+      hsl(0, 0%, 19%) 97%
+    );
+    --bg-gradient-jet: linear-gradient(
+      to bottom right, 
+      hsla(240, 1%, 18%, 0.251) 0%, 
+      hsla(240, 2%, 11%, 0) 100%
+    ), hsl(240, 2%, 13%);
+    --bg-gradient-yellow-1: linear-gradient(
+      to bottom right, 
+      hsl(45, 100%, 71%) 0%, 
+      hsla(36, 100%, 69%, 0) 50%
+    );
+    --bg-gradient-yellow-2: linear-gradient(
+      135deg, 
+      hsla(45, 100%, 71%, 0.251) 0%, 
+      hsla(35, 100%, 68%, 0) 59.86%
+    ), hsl(240, 2%, 13%);
+    --border-gradient-onyx: linear-gradient(
+      to bottom right, 
+      hsl(0, 0%, 25%) 0%, 
+      hsla(0, 0%, 25%, 0) 50%
+    );
+    --text-gradient-yellow: linear-gradient(
+      to right, 
+      hsl(45, 100%, 72%), 
+      hsl(35, 100%, 68%)
+    );
+  
+    /* solid */
+    --jet: hsl(0, 0%, 22%);
+    --onyx: hsl(240, 1%, 17%);
+    --eerie-black-1: hsl(240, 2%, 13%);
+    --eerie-black-2: hsl(240, 2%, 12%);
+    --smoky-black: hsl(0, 0%, 7%);
+    --white-1: hsl(0, 0%, 100%);
+    --white-2: hsl(0, 0%, 98%);
+    --orange-yellow-crayola: hsl(45, 100%, 72%);
+    --vegas-gold: hsl(45, 54%, 58%);
+    --light-gray: hsl(0, 0%, 84%);
+    --light-gray-70: hsla(0, 0%, 84%, 0.7);
+    --bittersweet-shimmer: hsl(0, 43%, 51%);
+  
+    /* typography ================================================== */
+    /* font-family */
+    --ff-poppins: 'Poppins', sans-serif;
+  
+    /* font-size */
+    --fs-1: 24px;
+    --fs-2: 18px;
+    --fs-3: 17px;
+    --fs-4: 16px;
+    --fs-5: 15px;
+    --fs-6: 14px;
+    --fs-7: 13px;
+    --fs-8: 11px;
+  
+    /* font-weight */
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+  
+    /* shadow */
+    --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+    --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+    --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
+    --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  
+    /* transitions */
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease-in-out;
+
+}
+
+/* ===========================
+
+Sectoins > Cards
+------------------------------
+- Block-Title
+- Block-Sub-Title
+- Block-Text
+- Card-Title
+- Card-Sub-Title
+- Card-Text 
+
+- Highlight
+- Quotes
+
+- NEXT PAGE BUTTON
+
+=========================== */
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* border: 1px solid white; */
+    flex-grow: 1;
+    min-height: 0rem;
+    margin: 1rem 0;
+}
+
+.block-title {
+    color: white;
+    font-size: var(--fs-1);
+    font-weight: 700;
+}
+
+.block-sub-title {
+    color: white;
+    font-size: var(--fs-2);
+    font-weight: 700;
+    line-height: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.block-text {
+    color: white;
+    font-size: var(--fs-4);
+    font-weight: 100;
+}
+
+/* ---------------------------------- */
+
+.card {
+    position: relative;
+    background: var(--border-gradient-onyx);
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: var(--shadow-2);
+    z-index: 1;
+    margin: 0.5rem 0;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: var(--bg-gradient-jet);
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+.card-title {
+    color: white;
+    font-size: var(--fs-1);
+    font-weight: var(--fw-600);
+    line-height: 1;
+}
+
+.card-sub-title {
+    color: var(--vegas-gold);
+    font-size: var(--fs-2);
+    font-weight: var(--fw-400);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: var(--light-gray);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-3);
+    line-height: 1.6;
+}
+
+/* ---------------------------------- */
+
+.highlight {
+    color: var(--orange-yellow-crayola);
+    display: inline;
+    font-weight: var(--fw-300);
+}
+
+.quote {
+    color: var(--orange-yellow-crayola);
+    font-size: var(--fs-1);
+    font-weight: var(--fw-600);
+    line-height: 140%;
+    width: 80%;
+}
+
+.horizontal-break {
+    margin: 2rem 40%;
+    width: 20%;
+    min-height: 0.4rem;
+    color: white;
+    background-color: var(--onyx);
+    border-radius: 0.2rem;
+}
+
+/* ---------------------------------- */
+
+.next-page-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    transition: all 0.1s ease-out;
+    border-radius: 1rem;
+}
+
+.next-page-btn > button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    color: var(--orange-yellow-crayola);
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+}
+
+.next-page-btn > button > ion-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.next-page-btn:hover {
+    background-color: var(--onyx);
+}
+
+/* ---------------------------------- */
