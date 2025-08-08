@@ -14,6 +14,27 @@ To all of you: thank you. Your dedication and willingness to share what you know
 - [ ] Shadcn/UI
 - [ ] Backend -> Nodejs & ExpressJS
 - [ ] Firebase
-- [ ] GPGPU Programming
+- [ ] GPGPU Programming - OpenCL / CUDA
 - [ ] Go Lang (backend)
 - [ ] Rust (backend)
+- [ ] GraphQL
+- [ ] PostgreSQL
+- [ ] Redis
+- [ ] Docker
+- [ ] Kubernetes
+- [ ] Authentication (JWT, OAuth)
+- [ ] WebAssembly
+- [ ] Multithreading Web Workers
+- [ ] Nginx
+- [ ] Terraform
+- [ ] OpenCL
+- [ ] Testing - Vitest / Playwright
+- [ ] React Native
+- [ ] Fastify
+- [ ] Kafka
+- [ ] WebRTC
+- [ ] MySQL
+- [ ] Vercel
+- [ ] Github Actions
+- [ ] Javascript Runtime - Deno / Bun
+- [ ] Monitoring - Sentry / Grafana
