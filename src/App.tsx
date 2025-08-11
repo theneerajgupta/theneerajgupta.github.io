@@ -1,10 +1,8 @@
-import './App.css'
-
 function App() {
   return (
-    <>
-      Testing 123, Hi there!
-    </>
+    <div>
+      Too Bad I Couldn't Implement It. GG for Efforts
+    </div>
   )
 }
 
