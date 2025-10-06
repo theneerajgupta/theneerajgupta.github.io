@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    /* ✅ Paths */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    /* ✅ Types */
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ],
+    /* ✅ Language & Module Target */
+    "target": "ES2022",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "verbatimModuleSyntax": true,
+    "useDefineForClassFields": true,
+    /* ✅ JSX */
+    "jsx": "react-jsx",
+    /* ✅ Emit & Imports */
+    "noEmit": true,
+    "allowImportingTsExtensions": false,
+    /* ✅ Strictness & Safety */
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "erasableSyntaxOnly": true,
+    /* ✅ Lint Rules (can be tuned) */
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": [
+    "src",
+    "types"
+  ]
+}
