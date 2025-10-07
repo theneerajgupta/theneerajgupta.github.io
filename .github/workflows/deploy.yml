@@ -3,22 +3,22 @@ name: Build & Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main   # deploy whenever code is pushed to main
+      - main   # Trigger deployment on push to the main branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repo
+      # Step 1: Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Setup Node.js
-      - name: Setup Node.js
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # your Node version
+          node-version: '20'  # Specify your Node.js version
 
       # Step 3: Install dependencies
       - name: Install dependencies
@@ -30,10 +30,10 @@ jobs:
 
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v7
+        uses: peaceiris/actions-gh-pages@v3.1.12
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages       # branch to deploy
-          publish_dir: ./build           # folder to deploy
-          force_orphan: true             # ensures branch is created if missing
-          keep_files: false              # clean old files before publishing
+          publish_branch: gh-pages       # Branch to deploy to
+          publish_dir: ./build           # Directory to deploy
+          force_orphan: true             # Create an orphan branch if it doesn't exist
+          keep_files: false              # Clean old files before publishing
