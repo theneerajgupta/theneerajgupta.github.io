@@ -1,12 +1,12 @@
-import './styles/App.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-
-import Blog from './pages/Blog';
 import { Suspense } from 'react';
+
+
 import MainLayout from './layout/MainLayout';
+import ErrorPage from './pages/error/ErrorPage';
+
 import Home from './pages/Home';
+import Blog from './pages/Blog';
 
 function App() {
   const navigate = useNavigate();
@@ -17,6 +17,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="blog" element={<Blog />} />
         </Route>
+        <Route path="/error/:code?" element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Suspense>
   );
